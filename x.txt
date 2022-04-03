@@ -1,4 +1,0 @@
-circle(6 2,2 9)
-cirjkcle(5 2,2 9)
-circle(5p 2,2 9)
-triangle(5 2,2 9)
