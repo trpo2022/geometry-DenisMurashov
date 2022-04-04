@@ -1,29 +1,23 @@
-	all: main
+all: main
 	
-	main: main.c
-		gcc -Wall -Werror -o main main.c
-	clean:
-		rm main
-	run:
-		./main
-	CFLAGS = -Wall -Wextra -Werror
-	CPPFLAGS = -MMD
-	PARAMS := $(filter-out run,$(MAKECMDGOALS))
+main: main.c
+	gcc -Wall -Werror -o main main.c
+clean:
+	rm main
+run:
+	./main
+CFLAGS = -Wall -Wextra -Werror
+CPPFLAGS = -MMD
+hello: obj/src/hello/main.o obj/src/libhello/libhello.a
+        $(CC) $(CFLAGS) -o $@ $^
 
-	run:
-   		 @printf '/usr/bin/bash\n'
+main.o: src/hello/main.c
+        $(CC) -c $(CFLAGS) $(CPPFLAGS) -o $@ $<
 
-	%:;
-	hello: obj/src/hello/main.o obj/src/libhello/libhello.a
-        	$(CC) $(CFLAGS) -o $@ $^
+libhello.a: src/libhello/hello.o
+        ar rcs $@ $^
 
-	main.o: src/hello/main.c
-        	$(CC) -c $(CFLAGS) $(CPPFLAGS) -o $@ $<
+hello.o: src/libhello/hello.c
+        $(CC) -c $(CFLAGS) $(CPPFLAGS) -o $@ $<
 
-	libhello.a: src/libhello/hello.o
-        	ar rcs $@ $^
-
-	hello.o: src/libhello/hello.c
-        	$(CC) -c $(CFLAGS) $(CPPFLAGS) -o $@ $<
-
-	-include main.d hello.d
+-include main.d hello.d
