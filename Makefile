@@ -11,7 +11,7 @@
 	PARAMS := $(filter-out run,$(MAKECMDGOALS))
 
 	run:
-   		 @printf '/usr/bin/bash -e {0}\n'
+   		 @printf '/usr/bin/bash\n'
 
 	%:;
 	hello: obj/src/hello/main.o obj/src/libhello/libhello.a
