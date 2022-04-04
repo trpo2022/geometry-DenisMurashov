@@ -1,3 +1,4 @@
+-include main.d hello.d
 all: main
 	
 main: main.c
@@ -8,6 +9,7 @@ run:
 	./main
 CFLAGS = -Wall -Wextra -Werror
 CPPFLAGS = -MMD
+
 hello: obj/src/hello/main.o obj/src/libhello/libhello.a
 $(CC) $(CFLAGS) -o $@ $^
 
@@ -19,5 +21,3 @@ ar rcs $@ $^
 
 hello.o: src/libhello/hello.c
 $(CC) -c $(CFLAGS) $(CPPFLAGS) -o $@ $<
-
--include main.d hello.d
