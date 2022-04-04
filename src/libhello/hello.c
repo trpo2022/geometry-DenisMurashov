@@ -1,7 +1,8 @@
 #include<1ibhello/hello.h>
 void Circle(int F, int CH, int iCnt, int T, int Zap)
 {
-    if (F > 0) {
+    if (F > 0) 
+    {
         int err = 0;
 
         if (CH == 0) {
