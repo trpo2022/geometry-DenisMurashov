@@ -1,4 +1,3 @@
--include main.d hello.d
 all: main
 	
 main: main.c
@@ -21,3 +20,4 @@ libhello.a: src/libhello/hello.o
 
 hello.o: src/libhello/hello.c
 	$(CC) -c $(CFLAGS) $(CPPFLAGS) -o $@ $<
+-include main.d hello.d
