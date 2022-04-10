@@ -15,4 +15,4 @@ obj/src/libhello/hello.o: src/libhello/hello.c
 run:
 	./*main
 clean:
-	rm -f bin/* obj/src/hello*.o obj/src/libhello*.c
+	rm -f bin/* obj/src/hello*.o obj/src/libhello*.o
