@@ -1,5 +1,5 @@
 #define _CRT_SECURE_NO_WARNINGS 
-
+#include<conio>
 #include <cstdlib>
 #include <ctype.h>
 #include <iostream>
