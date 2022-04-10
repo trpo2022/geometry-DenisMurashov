@@ -3,7 +3,7 @@
 
 CFLAGS = -Wall -Wextra -Werror
 
-bin/hello: obj/src/hello/hello.o obj/src/libhello/hello.o
+bin/hello: obj/src/hello/main.o obj/src/libhello/hello.o
 	$(CC) $(CFLAGS) -o $@ $^
 
 obj/src/hello/main.o: src/main/main.c
