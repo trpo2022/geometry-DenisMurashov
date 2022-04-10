@@ -1,4 +1,4 @@
-#include <1ibhello/hello.h>
+#include <libhello/hello.h>
 void make_string_null(char c[]) {
   int i;
   for (i = 0; i < strlen(c); i++) {
