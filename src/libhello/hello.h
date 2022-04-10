@@ -1,3 +1,3 @@
 #pragma once
-num_check(arr);
-make_string_null(number);
+void Circle(F, CH, iCnt, T, Zap);
+void Triangle(F1, CH, iCnt1, T, Zap);
