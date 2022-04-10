@@ -1,5 +1,3 @@
-#include <conio.h>
-#include <cstdlib>
 #include <ctype.h>
 #include <iostream>
 #include <math.h>
