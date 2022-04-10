@@ -1,4 +1,12 @@
 
+#include <ctype.h>
+#include <iostream>
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <string>
+using namespace std;
 
 const int N = (int)1e5 + 1;
 
