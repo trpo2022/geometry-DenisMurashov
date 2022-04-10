@@ -20,6 +20,6 @@ obj/src/libhello/hello.o: src/libhello/hello.c
 	$(CC) -c $(CFLAGS) -o $@ $<
 	
 run:
-	./*hello
+	./*main
 clean:
 	rm -f bin/* obj/src/hello*.o obj/src/libhello*.c
