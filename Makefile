@@ -6,10 +6,10 @@ CFLAGS = -Wall -Wextra -Werror
 bin/hello: obj/src/hello/main.o obj/src/libhello/hello.o
 	$(CC) $(CFLAGS) -o $@ $^
 
-obj/src/hello/main.o: src/hello/main.c
+obj/src/hello/main.o: src/hello/main.cpp
 	$(CC) -c $(CFLAGS) -o $@ $<
 
-obj/src/libhello/hello.o: src/libhello/hello.c
+obj/src/libhello/hello.o: src/libhello/hello.cpp
 	$(CC) -c $(CFLAGS) -o $@ $<
 	
 run:
