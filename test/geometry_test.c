@@ -1,5 +1,6 @@
 #include <hello.h>
 #include<ctest.h>
+#include <math.h>
 
 CTEST(SUM_test, result_sum)
 {
