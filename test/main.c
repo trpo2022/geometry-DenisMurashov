@@ -21,6 +21,39 @@ const int N = (int)1e5 + 1;
 string str;
 int a[N];
 
+int KOL = 0;
+int Vivod = 0;
+int count1 = 0;
+int Per1[N];
+int Per2[N];
+
+struct Point
+{
+    double x, y;
+    Point() : x(0), y(0) {}
+    Point(double _x, double _y) : x(_x), y(_y) {}
+    double operator * (Point other)
+    {
+        return x * other.y - y * other.x;
+    }
+    double operator % (Point other)
+    {
+        return x * other.x + y * other.y;
+    }
+    double operator - (Point other)
+    {
+        return(x - other.x, y - other.y);
+    }
+    double operator + (Point other)
+    {
+        return(x + other.x, y + other.y);
+    }
+    double len()
+    {
+        return sqrt(x * x + y * y);
+    }
+};
+
 int main(int argc, char** argv)
 {
     FILE* x;
