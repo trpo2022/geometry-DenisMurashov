@@ -1,6 +1,9 @@
 #define CTEST_MAIN
 #include <ctest.h>
 
+#include "../thirdparty/ctest.h"
+#include "../src/libgeometry/hello.c"
+
 #define _CRT_SECURE_NO_WARNINGS 
 #include <ctype.h>
 #include <math.h>
