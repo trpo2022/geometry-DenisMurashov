@@ -120,6 +120,11 @@ void PerTriangle()
     cout << "Perimeter: " << perimeter << '\n';
 }
 
+int SUM(int F1, int CH, int iCnt1, int T, int Zap) {
+    int sum = F1 + CH + iCnt1 + T + Zap;
+    return sum;
+}
+
 void Triangle(int F1, int CH, int iCnt1, int T, int Zap)
 {
     if (F1 > 0) {
